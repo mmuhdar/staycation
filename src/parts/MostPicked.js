@@ -1,7 +1,7 @@
-import React from 'react';
-import Fade from 'react-reveal/Fade';
+import React from "react";
+import Fade from "react-reveal/Fade";
 
-import Button from 'elements/Button';
+import Button from "elements/Button";
 
 export default function MostPicked(props) {
   return (
@@ -13,14 +13,14 @@ export default function MostPicked(props) {
             return (
               <div
                 key={`mostpiked-${index}`}
-                className={`item column-4${index === 0 ? ' row-2' : ' row-1'}`}
+                className={`item column-4${index === 0 ? " row-2" : " row-1"}`}
               >
-                <Fade bottom delay={500 * index}>
+                <Fade bottom delay={300 * index}>
                   <div className="card card-featured">
                     <div className="tag">
                       <span className="font-weight-bolder">${item.price}</span>
                       <span className="font-weight-light">
-                        {' '}
+                        {" "}
                         per {item.unit}
                       </span>
                     </div>
@@ -35,7 +35,7 @@ export default function MostPicked(props) {
                       <Button
                         type="link"
                         className="stretched-link d-block text-white"
-                        href={`/propertites/${item._id}`}
+                        href={`/properties/${item._id}`}
                       >
                         <h5>{item.name}</h5>
                       </Button>

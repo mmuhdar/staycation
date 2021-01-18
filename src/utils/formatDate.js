@@ -1,5 +1,3 @@
-import Date from "elements/Form/InputDate";
-
 const formatDate = date => {
   const d = new Date(date);
   const dtf = new Intl.DateTimeFormat("en", {
@@ -10,7 +8,7 @@ const formatDate = date => {
   const [{ value: mo }, , { value: da }] = dtf.formatToParts(d);
 
   return `${da} ${mo}`;
-  //   return date;
+  // return date;
 };
 
 export default formatDate;
